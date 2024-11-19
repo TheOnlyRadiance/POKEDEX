@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MvvmGuia.Vistas.Pokemon.Detallepokemon"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:sharpnado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,0">
+                <GradientStop Color="#f2643c" Offset="0.1"/>
+                <GradientStop Color="#fdc589" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackLayout Margin="10,0,10,0">
+            <Image Source="https://i.postimg.cc/1zy9Sc9r/atras.png"
+                   HeightRequest="55"
+                   HorizontalOptions="Start"
+                   Margin="10,20,0,0"/>
+            <Label Text="#001"
+                   FontSize="50"
+                   FontAttributes="Bold"
+                   TextColor="White"/>
+            <Image Source="https://i.postimg.cc/3RXJW2DH/charizard-removebg-preview.png"
+                   HeightRequest="325"/>
+            <Label Text="charizard"
+                   FontSize="40"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Center"/>
+            <Grid>
+                <sharpnado:MaterialFrame
+                    CornerRadius="15"
+                    MaterialBlurStyle="Light"
+                    MaterialTheme="AcrylicBlur"
+                    />
+                <StackLayout Orientation="Horizontal"
+                             Margin="20,10,20,10">
+                    <StackLayout>
+                        <Label Text="Fuego" 
+                               FontSize="30" 
+                               FontAttributes="Bold" 
+                               TextColor="White"/>
+                        <Label Text="Poder"
+                               TextColor="White"
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand"
+                                 >
+                        <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="CenterAndExpand">
+                            <BoxView HeightRequest="30"
+                                     WidthRequest="30"
+                                     BackgroundColor="Black"
+                                     CornerRadius="15"
+                                     VerticalOptions="Center"/>
+                            <BoxView HeightRequest="30"
+                                     WidthRequest="30"
+                                     BackgroundColor="Black"
+                                     CornerRadius="15"
+                                     VerticalOptions="Center"/>
+                        </StackLayout>
+                        
+                        <Label Text="colores"
+                               TextColor="White"
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="#001" 
+                               FontSize="30" 
+                               FontAttributes="Bold" 
+                               TextColor="White"/>
+                        <Label Text="Orden"
+                               TextColor="White"
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+                
+            </Grid>
+            <Frame CornerRadius="30"
+                   Margin="0,20,0,0"
+                   HeightRequest="65"
+                   HasShadow="False"
+                   Padding="0">
+                <Grid ColumnDefinitions="*,*">
+                    <Button TextColor="Black"
+                            Text="Seguir"
+                            BackgroundColor="#5adf77"
+                            CornerRadius="30"
+                            FontAttributes="Bold"
+                            Margin="-5,-6,0,0"/>
+                    <StackLayout Grid.Column="1" Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="https://i.postimg.cc/j2s4T1D4/ciencias.png"
+                                   HeightRequest="30"
+                                   Margin="0,0,-10,0"/>
+                            <Label Text="rodri" TextColor="Black"
+                                   VerticalOptions="Center"
+                                   FontAttributes="Bold"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="https://i.postimg.cc/YSdtCKPX/158-png-removebg-preview.png"
+                                   HeightRequest="40"
+                                   Margin="0,0,-8,0"/>
+                            <Label Text="morquecho" TextColor="Black"
+                                   VerticalOptions="Center"
+                                   FontAttributes="Bold"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+                
+            </Frame>
+        </StackLayout>
+    </Grid>
+</ContentPage>
