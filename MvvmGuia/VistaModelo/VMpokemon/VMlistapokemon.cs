@@ -29,7 +29,7 @@ namespace MvvmGuia.VistaModelo.VMpokemon
         {
             get { return _listapokemon; }
             set { SetValue(ref _listapokemon, value); 
-                OnPropertyChanged();
+                //OnPropertyChanged();
             }
         }
         #endregion
@@ -50,7 +50,7 @@ namespace MvvmGuia.VistaModelo.VMpokemon
         #endregion
         #region COMANDOS
         public ICommand Iraregistrocommand => new Command(async () => await Iraregistro());
-        public ICommand Iradetallecommand => new Command(async() => await Iradetalle());
+        public ICommand Iradetallecommand => new Command<Mpokemon>(async(p) => await Iradetalle(p));
         #endregion
     }
 }
